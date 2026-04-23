@@ -1,0 +1,19 @@
+<h2>Cart 🛒</h2>
+
+<div *ngFor="let item of service.cart()">
+  <p>{{item.name}} - ₱{{item.price}}</p>
+
+  <input type="number" [(ngModel)]="item.qty">
+
+  <button (click)="buy(item)">BUY</button>
+</div>
+
+<h3>Total: ₱{{service.total()}}</h3>
+
+<hr>
+
+<h2>Orders 📦</h2>
+
+<div *ngFor="let order of orders">
+  <p>{{order.name}} | Qty: {{order.quantity}} | ₱{{order.price}}</p>
+</div>

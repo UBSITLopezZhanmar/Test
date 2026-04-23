@@ -1,0 +1,6 @@
+<h2>Monitors 🖥</h2>
+
+<div *ngFor="let item of service.monitors()">
+  <p>{{item.name}} - ₱{{item.price}}</p>
+  <button (click)="add(item)">Add to Cart</button>
+</div>

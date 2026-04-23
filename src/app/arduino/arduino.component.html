@@ -1,0 +1,6 @@
+<h2>Arduino 🖥</h2>
+
+<div *ngFor="let item of service.arduino()">
+  <p>{{item.name}} - ₱{{item.price}}</p>
+  <button (click)="add(item)">Add to Cart</button>
+</div>
