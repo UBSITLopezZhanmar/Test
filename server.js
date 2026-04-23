@@ -12,17 +12,16 @@ mongoose.connect(process.env.MONGODB_URI);
 app.listen(3000, () => console.log("Server running"));
 
 const Order = mongoose.model('orders', {
+  category: String,
   name: String,
   price: Number,
   quantity: Number
 });
 
-// GET
 app.get('/api/orders', async(req,res)=>{
   res.send(await Order.find());
 });
 
-// POST
 app.post('/api/orders', async(req,res)=>{
   const order = new Order(req.body);
   await order.save();

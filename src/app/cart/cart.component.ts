@@ -20,6 +20,7 @@ export class CartComponent implements OnInit {
 
   buy(item:any){
     const data = {
+      category: item.category,
       name: item.name,
       price: item.price,
       quantity: item.qty || 1
@@ -31,7 +32,21 @@ export class CartComponent implements OnInit {
     });
   }
 
+  remove(item:any){
+    this.service.cart.update(cartItems =>
+    cartItems.filter(i => i !== item)
+  );
+  }
+
   loadOrders(){
     this.service.getOrders().subscribe(data => this.orders = data);
   }
+
+  updateQty(item:any){
+  if(item.qty < 1){
+    item.qty = 1;
+  }
+
+  this.service.cart.update(c => [...c]);
+}
 }
