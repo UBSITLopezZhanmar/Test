@@ -1,13 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { StoreService } from '../store.service';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './cart.component.html'
+  imports: [FormsModule],
+  templateUrl: './cart.component.html',
+  styleUrl: './cart.component.css'
 })
 export class CartComponent implements OnInit {
 
@@ -25,7 +24,8 @@ export class CartComponent implements OnInit {
       category: item.category,
       name: item.name,
       price: item.price,
-      quantity: item.qty || 1
+      quantity: item.qty || 1,
+      image: item.image
     };
 
     this.service.saveOrder(data).subscribe(() => {
@@ -41,11 +41,13 @@ export class CartComponent implements OnInit {
   remove(item:any){
     this.service.cart.update(cartItems =>
       cartItems.filter(i => i !== item)
-  );
+    );
   }
 
   loadOrders(){
-    this.service.getOrders().subscribe(data => this.orders = data);
+    this.service.getOrders().subscribe(data => {
+      this.orders = data;
+    });
   }
 
   updateQty(item:any){

@@ -15,7 +15,8 @@ const Order = mongoose.model('orders', {
   category: String,
   name: String,
   price: Number,
-  quantity: Number
+  quantity: Number,
+  image: String
 });
 
 app.get('/api/orders', async(req,res)=>{

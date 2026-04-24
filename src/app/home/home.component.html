@@ -1,1 +1,80 @@
-<p>home works!</p>
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>WELCOME TO IT STORE 👩🏽‍💻</h1>
+  <p>Your one-stop shop for Tech, PC Parts & Arduino</p>
+  <button routerLink="/monitors">SHOP NOW</button>
+</section>
+
+<!-- CATEGORY SECTION -->
+<section class="categories">
+  <h2>SHOP BY CATEGORY</h2>
+
+  <div class="category-grid">
+
+    <div class="category-card" routerLink="/monitors">
+      <h3>🖥️ MONITORS</h3>
+    </div>
+
+    <div class="category-card" routerLink="/keyboards">
+      <h3>⌨️ KEYBOARDS</h3>
+    </div>
+
+    <div class="category-card" routerLink="/pc">
+      <h3>🖥 PC PARTS</h3>
+    </div>
+
+    <div class="category-card" routerLink="/arduino">
+      <h3>🤖 ARDUINO</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="featured">
+  <h2>FEATURED PRODUCTS</h2>
+
+  <div class="product-grid">
+
+    <!-- MONITOR -->
+    @for (item of service.monitors().slice(0,1); track item) {
+      <div class="product-card">
+        <img [src]="item.image">
+        <p>{{item.name}}</p>
+        <span>₱{{item.price}}</span>
+        <small>MONITOR</small>
+      </div>
+    }
+
+    <!-- KEYBOARD -->
+    @for (item of service.keyboards().slice(0,1); track item) {
+      <div class="product-card">
+        <img [src]="item.image">
+        <p>{{item.name}}</p>
+        <span>₱{{item.price}}</span>
+        <small>KEYBOARD</small>
+      </div>
+    }
+
+    <!-- PC -->
+    @for (item of service.pc().slice(0,1); track item) {
+      <div class="product-card">
+        <img [src]="item.image">
+        <p>{{item.name}}</p>
+        <span>₱{{item.price}}</span>
+        <small>PC PART</small>
+      </div>
+    }
+
+    <!-- ARDUINO -->
+    @for (item of service.arduino().slice(0,1); track item) {
+      <div class="product-card">
+        <img [src]="item.image">
+        <p>{{item.name}}</p>
+        <span>₱{{item.price}}</span>
+        <small>ARDUINO</small>
+      </div>
+    }
+
+  </div>
+</section>

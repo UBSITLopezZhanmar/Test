@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { StoreService } from '../store.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-arduino',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './arduino.component.html',
   styleUrl: './arduino.component.css'
 })

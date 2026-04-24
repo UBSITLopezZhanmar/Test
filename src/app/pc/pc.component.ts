@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { StoreService } from '../store.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pc',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './pc.component.html',
   styleUrl: './pc.component.css'
 })

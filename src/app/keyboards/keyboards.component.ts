@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { StoreService } from '../store.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-keyboards',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './keyboards.component.html',
   styleUrl: './keyboards.component.css'
 })

@@ -23,11 +23,13 @@
 
 .item-card h3 {
     margin: 0.5rem 0;
+    text-align: center;
 }
 
 .item-card p {
     margin: 0.3rem 0;
     font-size: 0.95rem;
+    text-align: center;
 }
 
 .item-img {

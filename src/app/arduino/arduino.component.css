@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 20px;
-    position: relative;
 }
 
 .item-card {
@@ -11,14 +10,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     background: rgba(20,20,20,0.85);
-    margin: 12px auto;
-    padding: 15px;
-    width: 80%;
-    border-radius: 12px;
+    padding: 1.2rem;
     border: 1px solid rgba(255,255,255,0.08);
-    transition: 0.3s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .item-card:hover {
@@ -28,11 +23,13 @@
 
 .item-card h3 {
     margin: 0.5rem 0;
+    text-align: center;
 }
 
 .item-card p {
     margin: 0.3rem 0;
     font-size: 0.95rem;
+    text-align: center;
 }
 
 .item-img {
@@ -46,16 +43,19 @@
 }
 
 button {
-  background: linear-gradient(135deg, #00f0ff, #8a2be2);
-  border: none;
-  padding: 6px 12px;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #00f0ff, #8a2be2);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Rokkitt', serif;
+    font-weight: 500;
 }
 
 button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #8a2be2;
+  box-shadow: 0 0 12px #8a2be2;
 }
