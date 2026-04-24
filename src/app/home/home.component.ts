@@ -10,4 +10,5 @@ import { StoreService } from '../store.service';
 })
 export class HomeComponent {
   service = inject(StoreService);
+
 }
