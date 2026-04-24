@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 40px;
+  background: linear-gradient(90deg, #00f0ff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  text-align: center;
+  color: #aaa;
+}

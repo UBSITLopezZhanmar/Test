@@ -1,7 +1,7 @@
 <div *ngFor="let item of service.cart()">
   <p>
     {{item.name}} | Qty: {{item.qty}} | 
-    ₱{{item.price * item.qty}}
+    ₱{{item.price}}
   </p>
 
   <input 
@@ -21,11 +21,26 @@
 <h2>ORDERS 📦</h2>
 
 <div *ngFor="let order of orders">
-  <p>
-    {{order.category}} | 
-    {{order.name}} | 
-    Qty: {{order.quantity}} | 
-    ₱{{order.price * order.quantity}}
-  </p>
+
+  <div *ngIf="editingId !== order._id">
+    <p>
+      {{order.category}} | 
+      {{order.name}} | 
+      Qty: {{order.quantity}} | 
+      ₱{{order.price * order.quantity}}
+    </p>
+
+    <button (click)="startEdit(order)">✏️ EDIT</button>
+    <button (click)="cancelOrder(order._id)">❌ CANCEL ORDER</button>
+  </div>
+
+  <div *ngIf="editingId === order._id">
+
+    <input [(ngModel)]="editData.quantity" type="number" min="1">
+
+    <button (click)="saveEdit()">💾 Save</button>
+    <button (click)="cancelEdit()">Cancel</button>
+
+  </div>
 </div>
 

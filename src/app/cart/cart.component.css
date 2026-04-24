@@ -1,0 +1,79 @@
+h3 {
+  text-align: center;
+  margin-top: 20px;
+  color: #00f0ff;
+}
+
+div {
+  background: rgba(20,20,20,0.9);
+  margin: 12px auto;
+  padding: 15px;
+  width: 80%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+div:hover {
+  box-shadow: 0 0 20px rgba(138,43,226,0.5);
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+input {
+  width: 60px;
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+  background: #111;
+  color: white;
+  text-align: center;
+  margin-right: 5px;
+}
+
+button {
+  margin: 3px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+button:nth-child(3) {
+  background: linear-gradient(135deg, #00f0ff, #8a2be2);
+}
+
+button:nth-child(4) {
+  background: linear-gradient(135deg, #ff4d4d, #ff0000);
+}
+
+button:nth-child(2) {
+  background: linear-gradient(135deg, #ffaa00, #ff6600);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #8a2be2;
+}
+
+hr {
+  margin: 30px auto;
+  width: 80%;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  background: linear-gradient(90deg, #00f0ff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div div {
+  border-left: 4px solid #8a2be2;
+}

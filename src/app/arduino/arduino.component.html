@@ -1,4 +1,17 @@
-<div *ngFor="let item of service.arduino()">
-  <p>{{item.name}} - ₱{{item.price}}</p>
-  <button (click)="add(item)">Add to Cart</button>
+<div class="item-container">
+
+@for (items of service.arduino(); track items){
+
+@if (items.category === 'ARDUINO') {
+
+<div class="item-card">
+  <h3>{{items.name}}</h3>
+  <p>₱{{items.price}}</p>
+  <img class="item-img" [src]="items.image">
+  <button (click)="add(items)">Add to Cart</button>
+</div>
+
+}
+
+}
 </div>

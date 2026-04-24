@@ -27,3 +27,17 @@ app.post('/api/orders', async(req,res)=>{
   await order.save();
   res.send(order);
 });
+
+app.delete('/api/orders/:id', async (req, res) => {
+    await Order.findByIdAndDelete(req.params.id);
+    res.status(200).send({ message: "Order cancelled" });
+});
+
+app.put('/api/orders/:id', async (req, res) => {
+    const updatedOrder = await Order.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+    );
+    res.send(updatedOrder);
+});

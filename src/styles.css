@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* background + font only */
+body {
+  background: radial-gradient(circle at top, #0b0b0b, #000);
+  color: white;
+  font-family: 'Rokkitt', serif;
+  font-weight: 600;
+}

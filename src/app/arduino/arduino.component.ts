@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { StoreService } from '../services/store.service';
+import { StoreService } from '../store.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

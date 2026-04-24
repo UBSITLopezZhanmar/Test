@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav h2 {
+  font-size: 22px;
+  background: linear-gradient(90deg, #00f0ff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}

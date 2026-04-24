@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreService } from '../services/store.service';
+import { StoreService } from '../store.service';
 
 @Component({
   selector: 'app-monitors',
-  standalone: true,
   imports: [CommonModule],
-  templateUrl: './monitors.component.html'
+  templateUrl: './monitors.component.html',
+  styleUrl: './monitors.component.css'
 })
 export class MonitorsComponent {
   service = inject(StoreService);
